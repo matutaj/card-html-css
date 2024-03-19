@@ -4,13 +4,63 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>slider</title>
+    
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="slider-container">
+    <div class="slider-container swiper">
         <div class="slide-content">
-            <div class="card-wrapper">
-                <div class="card">
+            <div class="card-wrapper swiper-wrapper">
+                <div class="card swiper-slide">
+                    <div class="image-content">
+                        <span class="overplay"></span> 
+                        <div class="card-image">
+                            <img src="img/IMG-20221010-WA0007.jpg" alt="" class="card-img">
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h2 class="name"> Matuta Jorge</h2>
+                        <p class="description"> Lorem ipsum dolor sit amet consectetur adipisicing
+                             elit. Dignissimos vero ipsam perferendis fuga modi architecto placeat
+                              maxime praesentium aspernatur, ut animi. 
+                            Quibusdam eius sit deserunt sunt reiciendis eaque impedit? Quo.</p>
+                            <button class="button"> Ver mais...</button>
+                    </div>
+                </div>
+                <div class="card swiper-slide">
+                    <div class="image-content">
+                        <span class="overplay"></span> 
+                        <div class="card-image">
+                            <img src="img/IMG-20221010-WA0007.jpg" alt="" class="card-img">
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h2 class="name"> Matuta Jorge</h2>
+                        <p class="description"> Lorem ipsum dolor sit amet consectetur adipisicing
+                             elit. Dignissimos vero ipsam perferendis fuga modi architecto placeat
+                              maxime praesentium aspernatur, ut animi. 
+                            Quibusdam eius sit deserunt sunt reiciendis eaque impedit? Quo.</p>
+                            <button class="button"> Ver mais...</button>
+                    </div>
+                </div>
+                <div class="card swiper-slide">
+                    <div class="image-content">
+                        <span class="overplay"></span> 
+                        <div class="card-image">
+                            <img src="img/IMG-20221010-WA0007.jpg" alt="" class="card-img">
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h2 class="name"> Matuta Jorge</h2>
+                        <p class="description"> Lorem ipsum dolor sit amet consectetur adipisicing
+                             elit. Dignissimos vero ipsam perferendis fuga modi architecto placeat
+                              maxime praesentium aspernatur, ut animi. 
+                            Quibusdam eius sit deserunt sunt reiciendis eaque impedit? Quo.</p>
+                            <button class="button"> Ver mais...</button>
+                    </div>
+                </div>
+                <!--  -->
+                <div class="card swiper-slide">
                     <div class="image-content">
                         <span class="overplay"></span> 
                         <div class="card-image">
@@ -28,6 +78,46 @@
                 </div>
             </div>
         </div>  
+        
+        <div class="swiper-button-next swiper-navBtn"></div>
+        <div class="swiper-button-prev swiper-navBtn"></div>
+        <div class="swiper-pagination"></div>
     </div>
 </body>
+<script type="module">
+    import swiper from 'https://cdn.jsdelivr.net/npm/swiper@11.0.7/+esm'
+    </script>
+    <script>
+         var swiper = new Swiper(".slide-content", {
+                slidesPerView: 3,
+                spaceBetween: 25,
+                loop: true,
+                centerSlide: 'true',
+                fade: 'true',
+                grabCursor: 'true',
+                pagination: {
+                  el: ".swiper-pagination",
+                  clickable: true,
+                  dynamicBullets: true,
+                },
+                navigation: {
+                  nextEl: ".swiper-button-next",
+                  prevEl: ".swiper-button-prev",
+                },
+            
+                breakpoints:{
+                    0: {
+                        slidesPerView: 1,
+                    },
+                    520: {
+                        slidesPerView: 2,
+                    },
+                    950: {
+                        slidesPerView: 3,
+                    },
+                },
+              });
+            
+            </script>
+    </script>
 </html>
